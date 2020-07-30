@@ -29,18 +29,16 @@ class Home extends Component {
     });
   }
 
-  handleIsValid = () => {
-    this.setState(toggleKey('isValid'));
-    this.handleCounter();
-  }
-
   toggleKey=key=>state=>{
     return{
       [key]:!state[key]
     }
   }
 
-  
+  handleIsValid = () => {
+    this.setState(this.toggleKey('isValid'));
+    this.handleCounter();
+  }
 
   render(){
     return (
